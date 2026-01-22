@@ -4,7 +4,9 @@
 void sensorSample();
 void filter();
 void sendTelemetry();
-void calcAltitude();
+void calcAltitude() {
+  // calculate the apogee based on current velocity, altitude, and elevation angle
+}
 
 
 void setup() {
