@@ -1,0 +1,392 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "871c113b-1a4a-4bcb-9321-c2ba27503110")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 162.56 19.05)
+		(size 41.91 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "03eacf75-a13f-43eb-aea5-a2a73e5ebd42")
+		(property "Sheetname" "IMU"
+			(at 162.56 18.3384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IMU.kicad_sch"
+			(at 162.56 38.6846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 210.82 19.05)
+		(size 40.64 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "29a409fe-c8d6-4534-a77e-2f94fd9a71fb")
+		(property "Sheetname" "Barometer"
+			(at 210.82 18.3384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Barometer.kicad_sch"
+			(at 210.82 32.3346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 19.05 17.78)
+		(size 21.59 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5797a452-dd84-422e-8598-e3787a117f09")
+		(property "Sheetname" "Power Supplies"
+			(at 19.05 17.0684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power_Supplies.kicad_sch"
+			(at 19.05 36.1446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 19.05)
+		(size 41.91 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6ef77d1f-e63f-4da5-90f3-2f1a63645fb9")
+		(property "Sheetname" "GPS"
+			(at 111.76 18.3384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "GPS.kicad_sch"
+			(at 111.76 33.6046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 63.5 45.72)
+		(size 21.59 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9dabc242-9456-4a3d-8ee3-7dde512a87e9")
+		(property "Sheetname" "ARCGate"
+			(at 63.5 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "arcgate.kicad_sch"
+			(at 63.5 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 93.98 45.72)
+		(size 20.32 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b8be94d2-ff55-42e8-866c-759d694d670c")
+		(property "Sheetname" "Micro SD Card Reader"
+			(at 93.98 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MSD.kicad_sch"
+			(at 93.98 65.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 60.96 17.78)
+		(size 41.91 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ba4db081-957a-47f4-bd73-671fd3ad9125")
+		(property "Sheetname" "Stepper Motor"
+			(at 60.96 17.0684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "StepperMotor.kicad_sch"
+			(at 60.96 37.4146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 19.05 45.72)
+		(size 40.64 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "df53689c-e4b5-41ec-8e96-a96de906250c")
+		(property "Sheetname" "ESP32-S3"
+			(at 19.05 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ESP32-S3.kicad_sch"
+			(at 19.05 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 124.46 45.72)
+		(size 30.48 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f23db370-2bc4-4a96-9f5c-d87341e27757")
+		(property "Sheetname" "External Connectors"
+			(at 124.46 45.0084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "External.kicad_sch"
+			(at 124.46 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Elysium_2026_ACB"
+				(path "/871c113b-1a4a-4bcb-9321-c2ba27503110"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
