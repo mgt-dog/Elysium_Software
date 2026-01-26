@@ -3,6 +3,8 @@
 #include <Wire.h>
 #include <Adafruit_LPS2X.h>
 #include <Adafruit_Sensor.h>
+#include <Arduino_LSM6DS3.h>
+
 
 void sensorSample();
 void filter();
@@ -40,6 +42,9 @@ void setup() {
     if (!lps.begin_I2C()) 
       {Serial.println("Failed to find LPS22 chip");}
     lps.setDataRate(LPS22_RATE_25_HZ);
+  // LSM Setup
+    if (!IMU.begin()) 
+    {Serial.println("Failed to initialize IMU!");}
 }
 
 void loop() {
@@ -60,6 +65,14 @@ void sensorSample(){
     lps.getEvent(&pres, &temp);// get pressure
     float temperature = temp.temperature;
     float pressure = pres.pressure;
-
+  //LSM
+    float gx,gy,gz;
+    if(IMU.gyroscopeAvailable()){
+      IMU.readGyroscope(gx,gy,gz);
+    }
+    float ax,ay,az;
+    if(IMU.accelerationAvailable()){
+      IMU.readAcceleration(ax,ay,az);
+    }
 
 }
