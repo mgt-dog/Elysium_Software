@@ -12,7 +12,7 @@ void filter();
 void sendTelemetry();
 float calcApogee();
 float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d);
-float  calcAcceleration(float velocity_x, float velocity_y, float p, float area);
+float calcAcceleration(float velocity_x, float velocity_y, float p, float area);
 
 //Global Variables
   float altitude;
@@ -114,6 +114,7 @@ float calcApogee() {
   return apogee;
 }
 
+// Calculate the next velocity based on the current acceleration from drag and gravity
 float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d) {
   float theta = atan(v_y/v_x);
   float a_d = -1*sin(theta)*0.5*p*C_d*(pow(v_x,2)+pow(v_y,2));
@@ -121,5 +122,5 @@ float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d
   float a = a_d + a_g;
   v_y -= a*h;
   
-  return 0;
+  return v_y;
 }
