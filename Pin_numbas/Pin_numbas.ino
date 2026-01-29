@@ -15,10 +15,4 @@
 #define SCK2 18
 #define DI2 19
 
-#include <Wire.h>
-#include <Adafruit_Sensor.h>
-#include <Arduino_LSM6D3.h>
-#include <Adafruit_LPS2X.h>
-#include <HardwareSerial.h>
-#include <SPI.h>
 
