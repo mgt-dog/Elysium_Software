@@ -4,18 +4,14 @@
 #include <Adafruit_LPS2X.h>
 #include <Adafruit_Sensor.h>
 #include <Arduino_LSM6DS3.h>
-
+#include <math.h>
 
 void sensorSample();
 void filter();
 void sendTelemetry();
-void calcApogee() {
-  // calculate the apogee based on current velocity, altitude, and elevation angle
-  // based on the fourth order  runge-kutta method for approximation
-  m=22.389 //Kilograms
-  A_r=0.019 //m^2
-  p= //kg/m^3
-}
+float calcApogee();
+float calcVelocity();
+float  calcAcceleration(float velocity_x, float velocity_y, float p, float area);
 
 //UART 
   //GPS 
@@ -81,4 +77,33 @@ void sensorSample(){
       IMU.readAcceleration(ax,ay,az);
     }
 
+}
+
+float
+
+float calcApogee() {
+  // calculate the apogee based on current velocity, altitude, and elevation angle
+  // based on the fourth order  runge-kutta method for approximation
+  // initiate all variables
+  const float t_h = 0.1;
+  const float m = 22.389; //Kilograms
+  const float A_r = 0.019; //m^2
+  float y_p = CURRENT_ALTITUDE;
+  float v_x = (CURRENT_VELOCITY.X^2+CURRENT_VELOCITY.Y^2)^(1/2);
+  float v_y = CURRENT_VELOCITY.Z;
+  float p; //kg/m^3
+  float apogee;
+  while v_y > 0:
+
+float calcVelocity() {
+
+}
+
+float calcAcceleration(float velocity[], float p, float area, float C_d) {
+  float a;
+  float theta = atan(velocity[1]/velocity[0]);
+  float A_d = sin(theta)*0.5*p*C_d*(velocity[0]^2+velocity[1]^2);
+}
+
+  return apogee;
 }
