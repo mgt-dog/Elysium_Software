@@ -89,7 +89,7 @@ void loop() {
         { 
           if(velY<0.5 && velY>-0.5){
              delay(15);
-             if(velY<0.5 && velY>-0.5{
+             if(velY<0.5 && velY>-0.5){
               STATE = LANDED;
              }
           }
