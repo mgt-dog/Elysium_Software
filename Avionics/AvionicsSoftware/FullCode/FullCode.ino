@@ -26,7 +26,7 @@ float  calcAcceleration(float velocity_x, float velocity_y, float p, float area)
  
 //I2C 
   //LPS
-    Adafruit_LPS22 lps;
+    Adafruit_LPS25 lps;
   const int I2CSDA = 4;
   const int I2CSCL = 5;
 
@@ -46,8 +46,8 @@ void setup() {
       {Serial.println(F("u-blox GNSS not detected. Retrying..."));}
   //LSP Setup
     if (!lps.begin_I2C()) 
-      {Serial.println("Failed to find LPS22 chip");}
-    lps.setDataRate(LPS22_RATE_25_HZ);
+      {Serial.println("Failed to find LPS25 chip");}
+    lps.setDataRate(LPS25_RATE_25_HZ);
   // LSM Setup
     if (!IMU.begin()) 
     {Serial.println("Failed to initialize IMU!");}
@@ -107,7 +107,7 @@ float calcAcceleration(float velocity[], float p, float area, float C_d) {
   float a;
   float theta = atan(velocity[1]/velocity[0]);
   float A_d = sin(theta)*0.5*p*C_d*(velocity[0]^2+velocity[1]^2);
-}
+
 
   return apogee;
 }
