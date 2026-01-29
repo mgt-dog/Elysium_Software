@@ -13,6 +13,10 @@ float calcApogee();
 float calcVelocity();
 float  calcAcceleration(float velocity_x, float velocity_y, float p, float area);
 
+//Global Variables
+  float velocityX, velocityY, velocityZ;
+  float accelerationX, accelerationY, accelerationZ;
+  float temperature, pressure;
 //UART 
   //GPS 
     #define gpsSerial Serial0
@@ -65,8 +69,8 @@ void sensorSample(){
     sensors_event_t temp;
     sensors_event_t pres;
     lps.getEvent(&pres, &temp);// get pressure
-    float temperature = temp.temperature;
-    float pressure = pres.pressure;
+     temperature = temp.temperature;
+     pressure = pres.pressure;
   //LSM
     float gx,gy,gz;
     if(IMU.gyroscopeAvailable()){
@@ -93,7 +97,7 @@ float calcApogee() {
   float v_y = CURRENT_VELOCITY.Z;
   float p; //kg/m^3
   float apogee;
-  while v_y > 0:
+  while (v_y > 0);
 
 float calcVelocity() {
 
