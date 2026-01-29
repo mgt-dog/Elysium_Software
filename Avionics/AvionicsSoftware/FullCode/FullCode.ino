@@ -86,7 +86,7 @@ void loop() {
         break;
 
       case COAST: 
-        if (tAcel < 0 && velY < 0)
+        if (accelerationZ < 0 && velY < 0)
           { STATE = DESCENT; 
             lastTime = millis();
           } //instert automatic closing of airbreaks right here
