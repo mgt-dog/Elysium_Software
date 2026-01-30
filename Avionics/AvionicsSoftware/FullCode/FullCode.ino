@@ -6,7 +6,6 @@
 #include <Arduino_LSM6DS3.h>
 #include <math.h>
 
-<<<<<<< HEAD
 // function Declerations
   void sensorSample();
   void filter();
@@ -15,14 +14,7 @@
   float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d);
   float  calcAcceleration(float velocity_x, float velocity_y, float p, float area);
   void stateMachine(float tAcel, float Alti, float velY);
-=======
-void sensorSample();
-void filter();
-void sendTelemetry();
-float calcApogee();
-float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d);
-float calcAcceleration(float velocity_x, float velocity_y, float p, float area);
->>>>>>> apogee-testing
+
 
 //Global Variables
   float altitude;
