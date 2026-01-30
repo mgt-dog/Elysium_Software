@@ -5,20 +5,33 @@
 #include <Adafruit_Sensor.h>
 #include <Arduino_LSM6DS3.h>
 #include <math.h>
-//maddy webhook check commit ahsdhfaoishfia tst 2
 
+<<<<<<< HEAD
+// function Declerations
+  void sensorSample();
+  void filter();
+  void sendTelemetry();
+  float calcApogee();
+  float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d);
+  float  calcAcceleration(float velocity_x, float velocity_y, float p, float area);
+  void stateMachine(float tAcel, float Alti, float velY);
+=======
 void sensorSample();
 void filter();
 void sendTelemetry();
 float calcApogee();
 float calcVelocity(float h, float v_x, float v_y, float p, float area, float C_d);
 float calcAcceleration(float velocity_x, float velocity_y, float p, float area);
+>>>>>>> apogee-testing
 
 //Global Variables
   float altitude;
   float velocityX, velocityY, velocityZ;
   float accelerationX, accelerationY, accelerationZ;
   float temperature, pressure;
+
+  enum fstate{LAUNCHPAD, ASCENT, COAST, APOGEE, DESCENT, LANDED};
+  fstate STATE;
 //UART 
   //GPS 
     #define gpsSerial Serial0
@@ -59,6 +72,45 @@ void loop() {
   // put your main code here, to run repeatedly:
 
 }
+  void stateMachine(float tAcel, float Alti, float velY){
+    static float lastTime;
+    switch(STATE){
+      case LAUNCHPAD:
+       if((tAcel > 19.6 && Alti>10.0f)||(Alti>30.0f))
+          { STATE = ASCENT; }
+        break;
+
+      case ASCENT:
+        if(tAcel< 0) //include time t>3.96s later for burnout time of motor
+          { STATE = COAST; }
+        break;
+
+      case COAST: 
+        if (accelerationZ < 0 && velY < 0)
+          { STATE = DESCENT; 
+            lastTime = millis();
+          } //instert automatic closing of airbreaks right here
+        break;
+
+      case DESCENT:
+
+        if(millis()-lastTime > 30) //figure out a better way other than delay T-T
+        { 
+          if(velY<0.5 && velY>-0.5){
+             delay(15);
+             if(velY<0.5 && velY>-0.5){
+              STATE = LANDED;
+             }
+          }
+        }
+      break;
+
+      case LANDED:
+        break;
+
+    }
+  }
+
 
 void sensorSample(){
   //GPS
